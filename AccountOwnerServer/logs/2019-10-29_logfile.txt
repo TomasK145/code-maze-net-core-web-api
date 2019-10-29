@@ -1,0 +1,26 @@
+2019-10-29 07:47:49.2164 INFO Returned all owners from database
+2019-10-29 07:50:29.4442 INFO Returned all owners from database
+2019-10-29 07:52:21.9896 INFO Returned all owners from database
+2019-10-29 08:00:14.0794 INFO Returned all owners from database
+2019-10-29 08:00:21.6055 INFO Returned owner with id: 261e1685-cf26-494c-b17c-3546e65f5620
+2019-10-29 08:00:28.2344 ERROR Owner with id 261e1685-cf26-494c-b17c-3546e65f5621 does not exist in DB.
+2019-10-29 08:00:46.0050 INFO Returned owner with id: 261e1685-cf26-494c-b17c-3546e65f5620
+2019-10-29 08:18:06.9456 INFO Returned owner with id: 261e1685-cf26-494c-b17c-3546e65f5620
+2019-10-29 08:18:29.7353 INFO Returned owner with id: 261e1685-cf26-494c-b17c-3546e65f5620
+2019-10-29 08:18:35.9974 INFO Returned owner with details for id: 261e1685-cf26-494c-b17c-3546e65f5620
+2019-10-29 08:18:39.9198 INFO Returned owner with details for id: 261e1685-cf26-494c-b17c-3546e65f5620
+2019-10-29 08:18:50.9376 INFO Returned all owners from database
+2019-10-29 08:18:59.2554 INFO Returned owner with id: 24fd81f8-d58a-4bcc-9f35-dc6cd5641906
+2019-10-29 08:19:07.6997 INFO Returned owner with details for id: 24fd81f8-d58a-4bcc-9f35-dc6cd5641906
+2019-10-29 08:19:25.4229 INFO Returned all owners from database
+2019-10-29 08:19:40.7138 INFO Returned owner with id: 24fd81f8-d58a-4bcc-9f35-dc6cd5641906
+2019-10-29 08:19:46.3840 INFO Returned owner with details for id: 24fd81f8-d58a-4bcc-9f35-dc6cd5641906
+2019-10-29 08:20:20.5089 INFO Returned owner with details for id: 24fd81f8-d58a-4bcc-9f35-dc6cd5641906
+2019-10-29 08:22:43.1688 INFO Returned owner with details for id: 24fd81f8-d58a-4bcc-9f35-dc6cd5641906
+2019-10-29 08:22:57.2377 INFO Returned owner with details for id: 24fd81f8-d58a-4bcc-9f35-dc6cd5641906
+2019-10-29 08:25:54.0148 INFO Returned owner with details for id: 24fd81f8-d58a-4bcc-9f35-dc6cd5641906
+2019-10-29 08:27:16.0120 ERROR Ex: Unknown column 'a.OwnerId' in 'field list'
+2019-10-29 08:27:17.9785 ERROR Ex: Unknown column 'a.OwnerId' in 'field list'
+2019-10-29 08:28:52.9252 ERROR Ex: Unknown column 'a.OwnerId' in 'field list'
+2019-10-29 08:29:03.6045 ERROR Ex: Unknown column 'a.OwnerId' in 'field list'
+2019-10-29 08:32:00.2950 INFO Returned owner with details for id: 24fd81f8-d58a-4bcc-9f35-dc6cd5641906

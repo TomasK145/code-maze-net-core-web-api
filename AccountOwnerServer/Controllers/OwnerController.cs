@@ -1,9 +1,8 @@
 ﻿using Contracts;
+using Entities.Extensions;
+using Entities.Models;
 using Microsoft.AspNetCore.Mvc;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace AccountOwnerServer.Controllers
 {
@@ -37,14 +36,14 @@ namespace AccountOwnerServer.Controllers
             }
         }
 
-        [HttpGet("{id}")]
+        [HttpGet("{id}", Name = "OwnerById")]
         public IActionResult GetOwnerById(Guid id)
         {
             try
             {
                 var owner = _repository.Owner.GetOwnerById(id);
 
-                if (owner.Id.Equals(Guid.Empty))
+                if (owner.IsEmptyObject())
                 {
                     _logger.LogError($"Owner with id {id} does not exist in DB.");
                     return NotFound();
@@ -62,6 +61,43 @@ namespace AccountOwnerServer.Controllers
             }
         }
 
+        [HttpPost]
+        public IActionResult CreateOwner([FromBody]Owner owner)
+        {
+            try
+            {
+                if (owner.IsObjectNull())
+                {
+                    _logger.LogError("Owner object from client is null");
+                    return BadRequest("Owner object is null");
+                }
+
+                if (!ModelState.IsValid)
+                {
+                    _logger.LogError("Invalid owner object from client");
+                    return BadRequest("Invalid model object");
+                }
+
+                _repository.Owner.CreateOwner(owner);
+                _repository.Save();
+
+                return CreatedAtRoute("OwnerById", new { id = owner.Id }, owner);
+                /*
+                 CreatedAtRoute will return a status code 201, which stands for Created as explained in 
+                 our post: The HTTP Reference. Also, it will populate the body of the response with the 
+                 new owner object as well as the Location attribute within the response header with the 
+                 address to retrieve that owner. You need to provide the name of the action, where you 
+                 can retrieve the created entity.
+                 */
+
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"Err: {ex.Message}");
+                return StatusCode(500, "internal server error");
+            }
+        }
+
         [HttpGet("{id}/account")]
         public IActionResult GetOwnerWithDetails(Guid id)
         {
@@ -69,7 +105,7 @@ namespace AccountOwnerServer.Controllers
             {
                 var owner = _repository.Owner.GetOwnerWithDetails(id);
 
-                if (owner.Id.Equals(Guid.Empty))
+                if (owner.IsEmptyObject())
                 {
                     _logger.LogError($"Owner with id {id} does not exist");
                     return NotFound();

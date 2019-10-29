@@ -24,3 +24,4 @@
 2019-10-29 08:28:52.9252 ERROR Ex: Unknown column 'a.OwnerId' in 'field list'
 2019-10-29 08:29:03.6045 ERROR Ex: Unknown column 'a.OwnerId' in 'field list'
 2019-10-29 08:32:00.2950 INFO Returned owner with details for id: 24fd81f8-d58a-4bcc-9f35-dc6cd5641906
+2019-10-29 15:41:31.8672 ERROR Err: Transient exception detected

@@ -34,7 +34,7 @@ namespace Repository
         {
             return new OwnerExtended(GetOwnerById(ownerId))
             {
-                Accouts = RepositoryContext.Accounts.Where(a => a.OwnerId == ownerId)
+                Accounts = RepositoryContext.Accounts.Where(a => a.OwnerId == ownerId).ToList()
             };
         }
 

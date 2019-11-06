@@ -10,7 +10,7 @@ namespace Entities.ExtendedModels
         public string Name { get; set; }
         public DateTime DateOfBirth { get; set; }
         public string Address { get; set; }
-        public IEnumerable<Account> Accouts { get; set; }
+        public IEnumerable<Account> Accounts { get; set; }
 
         public OwnerExtended()
         {

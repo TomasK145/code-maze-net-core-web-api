@@ -1,0 +1,7 @@
+2019-11-07 16:39:05.8560 INFO Returned all owners from database
+2019-11-07 16:41:03.4495 INFO Returned all owners from database
+2019-11-07 16:41:13.4732 INFO Returned all owners from database
+2019-11-07 16:44:49.6536 INFO Returned all owners from database
+2019-11-07 16:45:27.0788 INFO Returned all owners from database
+2019-11-07 16:48:40.2722 INFO Returned all owners from database
+2019-11-07 16:49:19.2233 INFO Returned all owners from database

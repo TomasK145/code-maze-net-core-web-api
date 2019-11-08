@@ -19,6 +19,7 @@
 
   <ItemGroup>
     <Folder Include="internal_logs\" />
+    <Folder Include="wwwroot\" />
   </ItemGroup>
 
 </Project>

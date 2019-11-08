@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using Contracts;
 using Entities;
 using Entities.ExtendedModels;
 using Entities.Extensions;
 using Entities.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace Repository
 {
@@ -16,23 +18,21 @@ namespace Repository
 
         }
 
-        public IEnumerable<Owner> GetAllOwners()
+        public async Task<IEnumerable<Owner>> GetAllOwnersAsync()
         {
-            return FindAll()
+            return await FindAll()
                     .OrderBy(ow => ow.Name)
-                    .ToList();
+                    .ToListAsync();
         }
 
-        public Owner GetOwnerById(Guid ownerId)
+        public async Task<Owner> GetOwnerByIdAsync(Guid ownerId)
         {
-            return FindByCondition(owner => owner.Id.Equals(ownerId))
-                    .DefaultIfEmpty(new Owner())
-                    .FirstOrDefault();
+            return await FindByCondition(owner => owner.Id.Equals(ownerId)).FirstOrDefaultAsync();
         }
 
         public OwnerExtended GetOwnerWithDetails(Guid ownerId)
         {
-            return new OwnerExtended(GetOwnerById(ownerId))
+            return new OwnerExtended(GetOwnerByIdAsync(ownerId).Result)
             {
                 Accounts = RepositoryContext.Accounts.Where(a => a.OwnerId == ownerId).ToList()
             };

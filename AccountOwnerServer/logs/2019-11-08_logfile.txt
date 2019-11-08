@@ -31,3 +31,5 @@
 2019-11-08 12:06:36.1019 INFO Returned all owners from database
 2019-11-08 12:06:36.8349 INFO Returned owner with id: 4a995b1b-5770-4a92-8a6c-b9619797c089
 2019-11-08 12:06:39.1650 INFO Returned all owners from database
+2019-11-08 13:08:44.1422 INFO Returned all owners from database
+2019-11-08 13:08:50.3718 INFO Returned owner with details for id: 261e1685-cf26-494c-b17c-3546e65f5620
